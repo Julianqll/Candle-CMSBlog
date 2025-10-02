@@ -4,76 +4,76 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Candle's dark theme as default */
-  --background: oklch(0.11 0 0); /* #1c1c1c */
+  /* Candle's warm dark theme as default */
+  --background: oklch(0.15 0.02 45); /* #201a14 - warm dark brown */
   --foreground: oklch(0.98 0 0); /* Light text */
-  --card: oklch(0.13 0 0); /* Slightly lighter than background */
+  --card: oklch(0.18 0.02 45); /* Slightly lighter than background */
   --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.13 0 0);
+  --popover: oklch(0.18 0.02 45);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.7 0.15 45); /* Warm orange #ff9f1c */
-  --primary-foreground: oklch(0.11 0 0); /* Dark text on orange */
+  --primary: oklch(0.75 0.12 45); /* Warm orange #ffaf4f */
+  --primary-foreground: oklch(0.15 0.02 45); /* Dark text on orange */
   --secondary: oklch(0.75 0.12 65); /* Golden yellow #fcbf49 */
-  --secondary-foreground: oklch(0.11 0 0); /* Dark text on yellow */
-  --muted: oklch(0.18 0 0); /* Muted background */
+  --secondary-foreground: oklch(0.15 0.02 45); /* Dark text on yellow */
+  --muted: oklch(0.22 0.02 45); /* Muted background */
   --muted-foreground: oklch(0.65 0 0); /* Muted text */
   --accent: oklch(0.75 0.12 65); /* Golden yellow accent */
-  --accent-foreground: oklch(0.11 0 0);
+  --accent-foreground: oklch(0.15 0.02 45);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.25 0 0); /* Subtle borders */
-  --input: oklch(0.18 0 0); /* Input backgrounds */
-  --ring: oklch(0.7 0.15 45); /* Focus ring in orange */
-  --chart-1: oklch(0.7 0.15 45); /* Orange for charts */
+  --border: oklch(0.3 0.02 45); /* Subtle borders */
+  --input: oklch(0.22 0.02 45); /* Input backgrounds */
+  --ring: oklch(0.75 0.12 45); /* Focus ring in orange */
+  --chart-1: oklch(0.75 0.12 45); /* Orange for charts */
   --chart-2: oklch(0.75 0.12 65); /* Yellow for charts */
   --chart-3: oklch(0.6 0.1 180); /* Blue for charts */
   --chart-4: oklch(0.7 0.1 280); /* Purple for charts */
   --chart-5: oklch(0.65 0.12 120); /* Green for charts */
   --radius: 0.75rem; /* More rounded corners */
-  --sidebar: oklch(0.08 0 0); /* Darker sidebar */
+  --sidebar: oklch(0.12 0.02 45); /* Darker sidebar */
   --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.7 0.15 45); /* Orange sidebar accent */
-  --sidebar-primary-foreground: oklch(0.11 0 0);
-  --sidebar-accent: oklch(0.18 0 0);
+  --sidebar-primary: oklch(0.75 0.12 45); /* Orange sidebar accent */
+  --sidebar-primary-foreground: oklch(0.15 0.02 45);
+  --sidebar-accent: oklch(0.22 0.02 45);
   --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.25 0 0);
-  --sidebar-ring: oklch(0.7 0.15 45);
+  --sidebar-border: oklch(0.3 0.02 45);
+  --sidebar-ring: oklch(0.75 0.12 45);
 }
 
 .dark {
-  /* Keep the same Candle theme for dark mode */
-  --background: oklch(0.11 0 0); /* #1c1c1c */
+  /* Keep the same Candle warm theme for dark mode */
+  --background: oklch(0.15 0.02 45); /* #201a14 - warm dark brown */
   --foreground: oklch(0.98 0 0); /* Light text */
-  --card: oklch(0.13 0 0); /* Slightly lighter than background */
+  --card: oklch(0.18 0.02 45); /* Slightly lighter than background */
   --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.13 0 0);
+  --popover: oklch(0.18 0.02 45);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.7 0.15 45); /* Warm orange #ff9f1c */
-  --primary-foreground: oklch(0.11 0 0); /* Dark text on orange */
+  --primary: oklch(0.75 0.12 45); /* Warm orange #ffaf4f */
+  --primary-foreground: oklch(0.15 0.02 45); /* Dark text on orange */
   --secondary: oklch(0.75 0.12 65); /* Golden yellow #fcbf49 */
-  --secondary-foreground: oklch(0.11 0 0); /* Dark text on yellow */
-  --muted: oklch(0.18 0 0); /* Muted background */
+  --secondary-foreground: oklch(0.15 0.02 45); /* Dark text on yellow */
+  --muted: oklch(0.22 0.02 45); /* Muted background */
   --muted-foreground: oklch(0.65 0 0); /* Muted text */
   --accent: oklch(0.75 0.12 65); /* Golden yellow accent */
-  --accent-foreground: oklch(0.11 0 0);
+  --accent-foreground: oklch(0.15 0.02 45);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.25 0 0); /* Subtle borders */
-  --input: oklch(0.18 0 0); /* Input backgrounds */
-  --ring: oklch(0.7 0.15 45); /* Focus ring in orange */
-  --chart-1: oklch(0.7 0.15 45); /* Orange for charts */
+  --border: oklch(0.3 0.02 45); /* Subtle borders */
+  --input: oklch(0.22 0.02 45); /* Input backgrounds */
+  --ring: oklch(0.75 0.12 45); /* Focus ring in orange */
+  --chart-1: oklch(0.75 0.12 45); /* Orange for charts */
   --chart-2: oklch(0.75 0.12 65); /* Yellow for charts */
   --chart-3: oklch(0.6 0.1 180); /* Blue for charts */
   --chart-4: oklch(0.7 0.1 280); /* Purple for charts */
   --chart-5: oklch(0.65 0.12 120); /* Green for charts */
-  --sidebar: oklch(0.08 0 0); /* Darker sidebar */
+  --sidebar: oklch(0.12 0.02 45); /* Darker sidebar */
   --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.7 0.15 45); /* Orange sidebar accent */
-  --sidebar-primary-foreground: oklch(0.11 0 0);
-  --sidebar-accent: oklch(0.18 0 0);
+  --sidebar-primary: oklch(0.75 0.12 45); /* Orange sidebar accent */
+  --sidebar-primary-foreground: oklch(0.15 0.02 45);
+  --sidebar-accent: oklch(0.22 0.02 45);
   --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.25 0 0);
-  --sidebar-ring: oklch(0.7 0.15 45);
+  --sidebar-border: oklch(0.3 0.02 45);
+  --sidebar-ring: oklch(0.75 0.12 45);
 }
 
 @theme inline {
@@ -152,11 +152,11 @@
 
 /* Candle-specific enhancements */
 .candle-glow {
-  box-shadow: 0 0 20px rgba(255, 159, 28, 0.3);
+  box-shadow: 0 0 20px rgba(255, 175, 79, 0.3);
 }
 
 .candle-glow:hover {
-  box-shadow: 0 0 30px rgba(255, 159, 28, 0.5);
+  box-shadow: 0 0 30px rgba(255, 175, 79, 0.5);
 }
 
 .candle-glow-secondary {
@@ -169,11 +169,11 @@
 
 /* Enhanced shadows for cards */
 .candle-card-shadow {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 159, 28, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 175, 79, 0.1);
 }
 
 .candle-card-shadow:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 159, 28, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 175, 79, 0.2);
 }
 
 /* Soft glow for interactive elements */
@@ -183,7 +183,7 @@
 
 .candle-interactive:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 159, 28, 0.2);
+  box-shadow: 0 8px 25px rgba(255, 175, 79, 0.2);
 }
 
 /* Candle mascot animation keyframes */
@@ -229,7 +229,7 @@
 
 /* Focus states for accessibility */
 .candle-interactive:focus-visible {
-  outline: 2px solid oklch(0.7 0.15 45);
+  outline: 2px solid oklch(0.75 0.12 45);
   outline-offset: 2px;
 }
 
@@ -238,6 +238,6 @@
   .candle-glow,
   .candle-glow-secondary {
     box-shadow: none;
-    border: 2px solid oklch(0.7 0.15 45);
+    border: 2px solid oklch(0.75 0.12 45);
   }
 }
