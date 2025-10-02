@@ -26,7 +26,12 @@ const inter = Inter({
 export const metadata = {
   title: "Candle CMS - Content Management",
   description: "Mental health content management system",
-    generator: 'v0.app'
+  generator: 'v0.app',
+  icons: {
+    icon: '/candlesvg.png',
+    shortcut: '/candlesvg.png',
+    apple: '/candlesvg.png',
+  },
 }
 
 export default function RootLayout({

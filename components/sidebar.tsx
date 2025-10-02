@@ -13,7 +13,7 @@ import {
   Flame,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { CandleMascot } from "./candle-mascot"
+import Image from "next/image"
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: LayoutDashboard },
@@ -34,7 +34,13 @@ export function Sidebar() {
         {/* Logo */}
         <div className="flex h-16 items-center gap-3 border-b border-border px-6">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary candle-glow">
-            <CandleMascot size="sm" variant="flame" />
+            <Image 
+              src="/candlesvg.png" 
+              alt="Candle Logo" 
+              width={24} 
+              height={24}
+              className="candle-mascot"
+            />
           </div>
           <div>
             <h1 className="text-xl font-bold text-foreground font-nunito">Candle CMS</h1>
@@ -68,7 +74,13 @@ export function Sidebar() {
         <div className="border-t border-border p-4">
           <div className="rounded-xl bg-muted/50 p-4 candle-card-shadow">
             <div className="mb-2 flex items-center gap-2">
-              <CandleMascot size="sm" variant="gentle" />
+              <Image 
+                src="/candlesvg.png" 
+                alt="Candle Tips" 
+                width={20} 
+                height={20}
+                className="candle-mascot"
+              />
               <span className="text-sm font-semibold text-foreground font-nunito">Candle Tips</span>
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed font-poppins">

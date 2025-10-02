@@ -1,7 +1,7 @@
 import { Sidebar } from "@/components/sidebar"
 import { TopBar } from "@/components/top-bar"
-import { CandleMascot, CandleMascotWithText } from "@/components/candle-mascot"
 import { posts, notifications, comments, currentUser } from "@/lib/mock-data"
+import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -19,14 +19,19 @@ export default function DashboardPage() {
   const recentPosts = posts.slice(0, 5)
 
   return (
-    <div className="flex min-h-screen">
+    <div className="min-h-screen">
       <Sidebar />
-      <div className="flex-1 md:ml-64">
-        <TopBar />
-        <main className="p-4 md:p-6 space-y-4 md:space-y-6">
+      <TopBar />
+      <main className="p-4 md:p-6 space-y-4 md:space-y-6 md:ml-64">
           {/* Welcome Header */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <CandleMascot size="lg" variant="flame" />
+            <Image 
+              src="/candlesvg.png" 
+              alt="Welcome Candle" 
+              width={48} 
+              height={48}
+              className="candle-mascot"
+            />
             <div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2 font-nunito">
                 Welcome back, {currentUser.name.split(" ")[0]}!
@@ -41,9 +46,16 @@ export default function DashboardPage() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CandleMascotWithText size="sm" className="text-sm font-medium text-muted-foreground">
-                  Total Posts
-                </CandleMascotWithText>
+                <div className="flex items-center gap-2">
+                  <Image 
+                    src="/candlesvg.png" 
+                    alt="Total Posts" 
+                    width={16} 
+                    height={16}
+                    className="candle-mascot"
+                  />
+                  <span className="text-sm font-medium text-muted-foreground">Total Posts</span>
+                </div>
                 <FileText className="h-5 w-5 text-primary" />
               </CardHeader>
               <CardContent>
@@ -56,9 +68,16 @@ export default function DashboardPage() {
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CandleMascotWithText size="sm" className="text-sm font-medium text-muted-foreground">
-                  Total Views
-                </CandleMascotWithText>
+                <div className="flex items-center gap-2">
+                  <Image 
+                    src="/candlesvg.png" 
+                    alt="Total Views" 
+                    width={16} 
+                    height={16}
+                    className="candle-mascot"
+                  />
+                  <span className="text-sm font-medium text-muted-foreground">Total Views</span>
+                </div>
                 <Eye className="h-5 w-5 text-primary" />
               </CardHeader>
               <CardContent>
@@ -71,9 +90,16 @@ export default function DashboardPage() {
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CandleMascotWithText size="sm" className="text-sm font-medium text-muted-foreground">
-                  Pending Comments
-                </CandleMascotWithText>
+                <div className="flex items-center gap-2">
+                  <Image 
+                    src="/candlesvg.png" 
+                    alt="Pending Comments" 
+                    width={16} 
+                    height={16}
+                    className="candle-mascot"
+                  />
+                  <span className="text-sm font-medium text-muted-foreground">Pending Comments</span>
+                </div>
                 <MessageSquare className="h-5 w-5 text-primary" />
               </CardHeader>
               <CardContent>
@@ -84,9 +110,16 @@ export default function DashboardPage() {
 
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CandleMascotWithText size="sm" className="text-sm font-medium text-muted-foreground">
-                  Avg. Read Time
-                </CandleMascotWithText>
+                <div className="flex items-center gap-2">
+                  <Image 
+                    src="/candlesvg.png" 
+                    alt="Avg. Read Time" 
+                    width={16} 
+                    height={16}
+                    className="candle-mascot"
+                  />
+                  <span className="text-sm font-medium text-muted-foreground">Avg. Read Time</span>
+                </div>
                 <TrendingUp className="h-5 w-5 text-primary" />
               </CardHeader>
               <CardContent>
@@ -102,9 +135,16 @@ export default function DashboardPage() {
             {/* Quick Actions */}
             <Card>
               <CardHeader>
-                <CandleMascotWithText size="md" className="text-foreground font-nunito font-semibold">
-                  Quick Actions
-                </CandleMascotWithText>
+                <div className="flex items-center gap-3">
+                  <Image 
+                    src="/candlesvg.png" 
+                    alt="Quick Actions" 
+                    width={24} 
+                    height={24}
+                    className="candle-mascot"
+                  />
+                  <span className="text-foreground font-nunito font-semibold">Quick Actions</span>
+                </div>
                 <CardDescription className="font-poppins">Common tasks to get you started</CardDescription>
               </CardHeader>
               <CardContent className="space-y-2">
@@ -132,9 +172,16 @@ export default function DashboardPage() {
             {/* Content Status */}
             <Card>
               <CardHeader>
-                <CandleMascotWithText size="md" className="text-foreground font-nunito font-semibold">
-                  Content Status
-                </CandleMascotWithText>
+                <div className="flex items-center gap-3">
+                  <Image 
+                    src="/candlesvg.png" 
+                    alt="Content Status" 
+                    width={24} 
+                    height={24}
+                    className="candle-mascot"
+                  />
+                  <span className="text-foreground font-nunito font-semibold">Content Status</span>
+                </div>
                 <CardDescription className="font-poppins">Overview of your content workflow</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -175,9 +222,16 @@ export default function DashboardPage() {
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
-                  <CandleMascotWithText size="md" className="text-foreground font-nunito font-semibold">
-                    Recent Posts
-                  </CandleMascotWithText>
+                  <div className="flex items-center gap-3">
+                    <Image 
+                      src="/candlesvg.png" 
+                      alt="Recent Posts" 
+                      width={24} 
+                      height={24}
+                      className="candle-mascot"
+                    />
+                    <span className="text-foreground font-nunito font-semibold">Recent Posts</span>
+                  </div>
                   <CardDescription className="font-poppins">Your latest content activity</CardDescription>
                 </div>
                 <Button asChild variant="outline" size="sm">
@@ -233,9 +287,16 @@ export default function DashboardPage() {
           {unreadNotifications.length > 0 && (
             <Card className="border-primary/50 candle-glow-secondary">
               <CardHeader>
-                <CandleMascotWithText size="md" className="text-foreground font-nunito font-semibold">
-                  Action Required
-                </CandleMascotWithText>
+                <div className="flex items-center gap-3">
+                  <Image 
+                    src="/candlesvg.png" 
+                    alt="Action Required" 
+                    width={24} 
+                    height={24}
+                    className="candle-mascot"
+                  />
+                  <span className="text-foreground font-nunito font-semibold">Action Required</span>
+                </div>
                 <CardDescription className="font-poppins">Items that need your attention</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -256,7 +317,6 @@ export default function DashboardPage() {
             </Card>
           )}
         </main>
-      </div>
     </div>
   )
 }
