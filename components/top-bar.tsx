@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Search, Bell, Plus, ChevronDown, Menu } from "lucide-react"
+import { Search, Bell, Plus, ChevronDown, Menu, LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import {
@@ -17,10 +17,19 @@ import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import { currentUser, notifications } from "@/lib/mock-data"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 export function TopBar() {
   const [searchQuery, setSearchQuery] = useState("")
   const unreadCount = notifications.filter((n) => !n.read).length
+  const router = useRouter()
+
+  const handleLogout = () => {
+    localStorage.removeItem("candle-auth")
+    localStorage.removeItem("candle-user")
+    document.cookie = "candle-auth=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
+    router.push("/login")
+  }
 
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center gap-4 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm w-full">
@@ -144,7 +153,10 @@ export function TopBar() {
                 <Link href="/settings">Settings</Link>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem className="text-destructive">Sign out</DropdownMenuItem>
+              <DropdownMenuItem className="text-destructive" onClick={handleLogout}>
+                <LogOut className="h-4 w-4 mr-2" />
+                Sign out
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
